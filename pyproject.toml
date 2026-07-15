@@ -1,0 +1,19 @@
+[project]
+name = "llm-gateway"
+version = "1.0.0"
+description = "A teaching-scale LLM gateway with usage metering, rating, idempotent billing, and verification — built with FastAPI."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlmodel",
+    "anthropic",
+    "pyjwt",
+]
+
+[dependency-groups]
+dev = ["pytest", "httpx"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
